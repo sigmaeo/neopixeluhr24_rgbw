@@ -24,9 +24,9 @@ basic.forever(function () {
     for (let Index = 0; Index <= 23; Index++) {
         strip.setPixelWhiteLED(Index, 10)
     }
-    strip.setPixelColor(23 - stunde * 2, neopixel.colors(NeoPixelColors.Red))
-    strip.setPixelColor(23 - minute / 2.5, neopixel.colors(NeoPixelColors.Orange))
     strip.setPixelColor(23 - sekunde / 2.5, neopixel.colors(NeoPixelColors.Blue))
+    strip.setPixelColor(23 - minute / 2.5, neopixel.colors(NeoPixelColors.Orange))
+    strip.setPixelColor(23 - stunde * 2, neopixel.colors(NeoPixelColors.Red))
     strip.show()
-    basic.pause(100)
+    basic.pause(1000)
 })
