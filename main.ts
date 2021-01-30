@@ -21,8 +21,8 @@ basic.forever(function () {
             }
         }
     }
-    strip.setPixelColor(23 - sekunde / 2.5, neopixel.colors(NeoPixelColors.Blue))
-    strip.setPixelColor(23 - minute / 2.5, neopixel.colors(NeoPixelColors.Indigo))
+    strip.setPixelWhiteLED(23 - sekunde / 2.5, 100)
+    strip.setPixelColor(23 - minute / 2.5, neopixel.colors(NeoPixelColors.Blue))
     strip.setPixelColor(23 - stunde, neopixel.colors(NeoPixelColors.Red))
     strip.show()
     basic.pause(1)
