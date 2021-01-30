@@ -8,7 +8,6 @@ let sekunde = 0
 let minute = 23
 let stunde = 6
 basic.forever(function () {
-    strip.clear()
     sekunde += 1
     if (sekunde == 60) {
         sekunde = 0
@@ -21,9 +20,13 @@ basic.forever(function () {
             }
         }
     }
-    strip.setPixelWhiteLED(23 - sekunde / 2.5, 100)
-    strip.setPixelColor(23 - minute / 2.5, neopixel.colors(NeoPixelColors.Blue))
+    strip.clear()
+    for (let Index = 0; Index <= 23; Index++) {
+        strip.setPixelWhiteLED(Index, 10)
+    }
     strip.setPixelColor(23 - stunde * 2, neopixel.colors(NeoPixelColors.Red))
+    strip.setPixelColor(23 - minute / 2.5, neopixel.colors(NeoPixelColors.Orange))
+    strip.setPixelColor(23 - sekunde / 2.5, neopixel.colors(NeoPixelColors.Blue))
     strip.show()
-    basic.pause(1000)
+    basic.pause(100)
 })
